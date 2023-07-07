@@ -8,5 +8,6 @@ namespace JYanezS6
     {
         void shortAlert(string mensaje);
         void longAlert(string mensaje);
+        void longAlert(object mensaje);
     }
 }

@@ -20,6 +20,11 @@ namespace JYanezS6.Droid
             Toast.MakeText(Application.Context, mensaje, ToastLength.Long).Show();
         }
 
+        public void longAlert(object mensaje)
+        {
+            throw new NotImplementedException();
+        }
+
         public void shortAlert(string mensaje)
         {
             Toast.MakeText(Application.Context, mensaje, ToastLength.Short).Show();

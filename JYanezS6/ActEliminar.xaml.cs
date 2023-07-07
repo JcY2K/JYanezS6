@@ -36,6 +36,9 @@ namespace JYanezS6
                 datos.Add("edad", txtEdad.Text);
 
                 cliente.UploadValues(URL+"?codigo=" + txtCodigo.Text + "&nombre="+ txtNombre.Text + "&apellido=" + txtApellido.Text + "&edad=" + txtEdad.Text , "PUT", datos);
+
+                var mensaje = "Dato Actualizado con exito";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
                 Navigation.PushAsync(new MainPage());
             }
             catch (Exception ex)
@@ -54,6 +57,8 @@ namespace JYanezS6
 
                 datos.Add("codigo", txtCodigo.Text);
                 cliente.UploadValues(URL + "?codigo=" + txtCodigo.Text, "DELETE", datos);
+                var mensaje = "Dato iliminado con exito";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
                 Navigation.PushAsync(new MainPage());
             }
             catch (Exception ex)
