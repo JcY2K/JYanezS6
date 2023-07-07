@@ -30,6 +30,10 @@ namespace JYanezS6
                 datos.Add("edad", txtEdad.Text);
 
                 cliente.UploadValues(URL, "POST", datos);
+
+                var mensaje = "Dato ingresado con exito";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
+
                 Navigation.PushAsync(new MainPage());
             } catch (Exception ex) 
             {
